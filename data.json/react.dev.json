@@ -1,10 +1,6 @@
 [
     {
-        "clean_text": "React React The library for web and native user interfaces Learn React API Reference Create user interfaces from components React lets
-        you build user interfaces out of individual pieces called components. Create your own React components like Thumbnail , LikeButton , and Video . Then
-        combine them into entire screens, pages, and apps. Video.js function Video ( { video } ) { return ( < div > < Thumbnail video = { video } /> < a href = {
-        video . url } > < h3 > { video . title } </ h3 > < p > { video . description } </ p > </ a > < LikeButton video = { video } /> </ div > ) ; } My video Vid
-        description ... Welcome to the React community Get Started",
+        "clean_text": "React React The library for web and native user interfaces Learn React API Reference Create user interfaces from components React lets you build user interfaces out of individual pieces called components. Create your own React components like Thumbnail , LikeButton , and Video . Then combine them into entire screens, pages, and apps. Video.js function Video ( { video } ) { return ( < div > < Thumbnail video = { video } /> < a href = { video . url } > < h3 > { video . title } </ h3 > < p > { video . description } </ p > </ a > < LikeButton video = { video } /> </ div > ) ; } My video Vid description ... Welcome to the React community Get Started",
         "h1_list": [
             "React",
             "React Videos"
