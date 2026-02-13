@@ -1,0 +1,25 @@
+[
+    {
+        "clean_text": "react - npm \u26a0\ufe0f Security Update : Classic tokens have been revoked. Granular tokens are now limited to 90 days and require 2FA by default. Update your CI/CD workflows to avoid disruption. Learn more . \u00d7 skip to: content package search sign in \u2764 npm Search Sign Up Sign In react 19.2.4 \u2022 Public \u2022 Published 18 days ago Readme Code Beta 0 Dependencies 205596 Dependents 2,719 Versions react React is a JavaScript library for creating user interfaces. The react package contains only the functionality necessary to define React components. It is typically used together with a React renderer like react-dom for the web, or react-native for the native environments. Note: by default, React will be in development mode. The development version includes extra warnings about common mistakes, whereas the production version includes extra performance optimizations and strips all error messages. Don't forget to use the production build when deploying your application. Usage import { useState } from 'react' ; import { createRoot } from 'react-dom/client' ; function Counter ( ) { const [ count , setCount ] = useState ( 0 ) ; return ( < > < h1 > { count } </ h1 > < button onClick = { ( ) => setCount ( count + 1 ) } > Increment </ button > </ > ) ; } const root = createRoot ( document . getElementById ( 'root' ) ) ; root . render ( < Counter /> ) ; Documentation See https://react.dev/ API See https://react.dev/reference/react Readme Keywords react Package Sidebar Install npm i react Repository Git github.com/facebook/react Homepage react.dev/ Downloads Weekly Downloads 75,864,123 Version 19.2.4 License MIT Unpacked Size 172 kB Total Files 27 Last publish an hour ago Collaborators fb react-bot Analyze security with Socket Check bundle size View package health Explore dependencies Report malware",
+        "h1_list": [],
+        "h2_list": [
+            "Usage",
+            "Documentation",
+            "API",
+            "Readme",
+            "Package Sidebar"
+        ],
+        "h3_list": [
+            "Keywords",
+            "Install",
+            "Repository",
+            "Homepage",
+            "Version",
+            "License",
+            "Unpacked Size",
+            "Total Files",
+            "Last publish",
+            "Collaborators"
+        ]
+    }
+]
