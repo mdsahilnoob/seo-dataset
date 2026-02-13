@@ -1,0 +1,51 @@
+[
+    {
+        "clean_text": ":root {\n      --tab-size-preference: 4;\n    }\n\n    pre, code {\n      tab-size: var(--tab-size-preference);\n    } GitHub - angular/angular: Deliver web apps with confidence \ud83d\ude80 Skip to content /* Override primer focus outline color for marketing header dropdown links for better contrast */\n  [data-color-mode=\"light\"] .HeaderMenu-dropdown-link:focus-visible,\n  [data-color-mode=\"light\"] .HeaderMenu-trailing-link a:focus-visible {\n    outline-color: var(--color-accent-fg);\n  } Navigation Menu Toggle navigation Sign in Appearance settings Search or jump to... Search code, repositories, users, issues, pull requests... Search Clear Search syntax tips Provide feedback We read every piece of feedback, and take your input very seriously. Include my email address so I can be contacted Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Name Query To see all available qualifiers, see our documentation . Cancel Create saved search Sign in Sign up Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} angular / angular Public Notifications You must be signed in to change notification settings Fork 27.1k Star 99.8k Deliver web apps with confidence \ud83d\ude80 angular.dev License MIT license 99.8k stars 27.1k forks Branches Tags Activity Star Notifications You must be signed in to change notification settings angular/angular main Branches Tags Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 36,425 Commits 36,425 Commits .agent .agent .devcontainer .devcontainer .gemini .gemini .github .github .husky .husky .ng-dev .ng-dev .vscode .vscode adev adev contributing-docs contributing-docs dev-app dev-app devtools devtools goldens goldens integration integration modules modules packages packages scripts scripts third_party third_party tools tools vscode-ng-language-service vscode-ng-language-service .bazelrc .bazelrc .bazelversion .bazelversion .clang-format .clang-format .editorconfig .editorconfig .git-blame-ignore-revs .git-blame-ignore-revs .gitattributes .gitattributes .gitignore .gitignore .gitmessage .gitmessage .mailmap .mailmap .npmrc .npmrc .nvmrc .nvmrc .pnpmfile.cjs .pnpmfile.cjs .prettierignore .prettierignore .prettierrc .prettierrc .pullapprove.yml .pullapprove.yml AGENTS.md AGENTS.md BUILD.bazel BUILD.bazel CHANGELOG.md CHANGELOG.md CHANGELOG_ARCHIVE.md CHANGELOG_ARCHIVE.md CODE_OF_CONDUCT.md CODE_OF_CONDUCT.md CONTRIBUTING.md CONTRIBUTING.md LICENSE LICENSE MODULE.bazel MODULE.bazel MODULE.bazel.lock MODULE.bazel.lock README.md README.md REPO.bazel REPO.bazel SECURITY.md SECURITY.md browser-providers.conf.d.ts browser-providers.conf.d.ts browser-providers.conf.js browser-providers.conf.js context7.json context7.json gulpfile.js gulpfile.js karma-js.conf.js karma-js.conf.js package.json package.json packages.bzl packages.bzl pnpm-lock.yaml pnpm-lock.yaml pnpm-workspace.yaml pnpm-workspace.yaml renovate.json renovate.json tsconfig-tslint.json tsconfig-tslint.json tslint.json tslint.json View all files Repository files navigation Angular - The modern web developer's platform Angular is a development platform for building mobile and desktop web applications using TypeScript/JavaScript and other languages. angular.dev Contributing Guidelines \u00b7 Submit an Issue \u00b7 Blog Documentation Get started with Angular, learn the fundamentals and explore advanced topics on our documentation website. Getting Started Architecture Components and Templates Forms API Advanced Angular Elements Server Side Rendering Schematics Lazy Loading Animations Local Development To contribute to the Angular Docs, check out the Angular.dev README Development Setup Prerequisites Install Node.js which includes Node Package Manager Setting Up a Project Install the Angular CLI globally: npm install -g @angular/cli Create workspace: ng new [PROJECT NAME] Run the application: cd [PROJECT NAME]\nng serve Angular is cross-platform, fast, scalable, has incredible tooling, and is loved by millions. Quickstart Get started in 5 minutes . Ecosystem Angular Command Line (CLI) Angular Material Changelog Learn about the latest improvements . Upgrading Check out our upgrade guide to find out the best way to upgrade your project. Contributing Contributing Guidelines Read through our contributing guidelines to learn about our submission process, coding rules, and more. Want to Help? Want to report a bug, contribute some code, or improve the documentation? Excellent! Read up on our guidelines for contributing and then check out one of our issues labeled as help wanted or good first issue . Code of Conduct Help us keep Angular open and inclusive. Please read and follow our Code of Conduct . Community Join the conversation and help the community. X (formerly Twitter) Bluesky Discord YouTube StackOverflow Find a Local Meetup Love Angular? Give our repo a star \u2b50 \u2b06\ufe0f. About Deliver web apps with confidence \ud83d\ude80 angular.dev Topics javascript angular typescript web-performance web pwa web-framework Resources Readme License MIT license Code of conduct Code of conduct Contributing Contributing Security policy Security policy Uh oh! There was an error while loading. Please reload this page . Activity Custom properties Stars 99.8k stars Watchers 3k watching Forks 27.1k forks Report repository Releases 598 21.1.4 Latest Feb 11, 2026 + 597 releases Used by 4m + 4,030,540 Contributors 2,212 Uh oh! There was an error while loading. Please reload this page . + 2,198 contributors Languages TypeScript 87.2% JavaScript 6.8% HTML 2.2% Starlark 2.0% CSS 1.0% SCSS 0.7% Other 0.1%",
+        "h1_list": [
+            "Search code, repositories, users, issues, pull requests...",
+            "Provide feedback",
+            "Saved searches",
+            "angular/angular",
+            "Angular - The modern web developer's platform"
+        ],
+        "h2_list": [
+            "Navigation Menu",
+            "Use saved searches to filter your results more quickly",
+            "Folders and files",
+            "Latest commit",
+            "History",
+            "Repository files navigation",
+            "Documentation",
+            "Development Setup",
+            "Quickstart",
+            "Ecosystem",
+            "Changelog",
+            "Upgrading",
+            "Contributing",
+            "Community",
+            "About",
+            "Languages"
+        ],
+        "h3_list": [
+            "License",
+            "Advanced",
+            "Local Development",
+            "Prerequisites",
+            "Setting Up a Project",
+            "Contributing Guidelines",
+            "Want to Help?",
+            "Code of Conduct",
+            "Topics",
+            "Resources",
+            "License",
+            "Code of conduct",
+            "Contributing",
+            "Security policy",
+            "Uh oh!",
+            "Stars",
+            "Watchers",
+            "Forks",
+            "Uh oh!"
+        ]
+    }
+]

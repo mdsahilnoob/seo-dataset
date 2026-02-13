@@ -1,0 +1,13 @@
+[
+    {
+        "clean_text": "Getting started | Docs Skip to content Search GitHub Discord Select theme Dark Light Auto Select language English Deutsch Portugu\u00eas do Brasil Espa\u00f1ol \u7b80\u4f53\u4e2d\u6587 \u6b63\u9ad4\u4e2d\u6587 Fran\u00e7ais \u0939\u093f\u0928\u094d\u0926\u0940 \u0627\u0644\u0639\u0631\u0628\u064a\u0629 \u65e5\u672c\u8a9e \ud55c\uad6d\uc5b4 Polski \u0420\u0443\u0441\u0441\u043a\u0438\u0439 Italiano Astro Docs Guides, resources, and API references to help you build with Astro. Install Astro Learn about Astro\u2019s features Powered by Astro and our open-source contributors. Join us! Powered by Astro and our open-source contributors. Join us! What will you build with Astro? Explore Astro starter themes for blogs, portfolios, docs, landing pages, SaaS, marketing, ecommerce sites, and more! Take a guided tour Complete our introductory Build a Blog Tutorial to learn the basics and create your first Astro site. Start a new project Terminal window # create a new project with npm npm create astro@latest Our installation guide has step-by-step instructions for installing Astro using our CLI wizard, creating a new project from an existing Astro GitHub repository, and for installing Astro manually. Learn Astro\u2019s main features Islands architecture Astro components The Astro template syntax Extend Add integrations like React and Partytown Create type safe content collections Enhance navigation with view transitions Connect a headless CMS to your project Have a question or want to get involved? Join our Discord Learn Learn Astro with Coding in Public 150+ video lessons \u2022 Astro v5 ready Get 20% off Contribute Community Sponsor",
+        "h1_list": [
+            "Astro Docs"
+        ],
+        "h2_list": [
+            "Have a question or want to get involved?",
+            "Learn Astro with"
+        ],
+        "h3_list": []
+    }
+]

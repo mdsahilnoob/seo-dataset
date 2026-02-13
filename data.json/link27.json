@@ -1,0 +1,46 @@
+[
+    {
+        "clean_text": "GitHub - withastro/astro: The web framework for content-driven websites. \u2b50\ufe0f Star to support our work! Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Search or jump to... Search code, repositories, users, issues, pull requests... Search Clear Search syntax tips Provide feedback We read every piece of feedback, and take your input very seriously. Include my email address so I can be contacted Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Name Query To see all available qualifiers, see our documentation . Cancel Create saved search Sign in Sign up Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert {{ message }} withastro / astro Public Uh oh! There was an error while loading. Please reload this page . Notifications You must be signed in to change notification settings Fork 3.1k Star 56.8k The web framework for content-driven websites. \u2b50\ufe0f Star to support our work! astro.build License View license 56.8k stars 3.1k forks Branches Tags Activity Star Notifications You must be signed in to change notification settings withastro/astro main Branches Tags Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 13,562 Commits 13,562 Commits .agents/ skills/ triage .agents/ skills/ triage .changeset .changeset .devcontainer .devcontainer .flue/ workflows .flue/ workflows .github .github .gitpod .gitpod .vscode .vscode .zed .zed benchmark benchmark examples examples packages packages scripts scripts .editorconfig .editorconfig .git-blame-ignore-revs .git-blame-ignore-revs .gitignore .gitignore .gitpod.yml .gitpod.yml .nvmrc .nvmrc .prettierignore .prettierignore AGENTS.md AGENTS.md CONTRIBUTING.md CONTRIBUTING.md LICENSE LICENSE README.md README.md SECURITY.md SECURITY.md SECURITY_CONTACTS SECURITY_CONTACTS STYLE_GUIDE.md STYLE_GUIDE.md biome.jsonc biome.jsonc eslint.config.js eslint.config.js knip.js knip.js package.json package.json pnpm-lock.yaml pnpm-lock.yaml pnpm-workspace.yaml pnpm-workspace.yaml prettier.config.mjs prettier.config.mjs tsconfig.base.json tsconfig.base.json tsconfig.eslint.json tsconfig.eslint.json tsconfig.json tsconfig.json turbo.json turbo.json View all files Repository files navigation Astro is a website build tool for the modern web \u2014 powerful developer experience meets lightweight output. Install The recommended way to install the latest version of Astro is by running the command below: npm create astro@latest You can also install Astro manually by running this command instead: npm install --save-dev astro Looking for help? Start with our Getting Started guide. Looking for quick examples? Open a starter project right in your browser. Documentation Visit our official documentation . Support Having trouble? Get help in the official Astro Discord . Contributing New contributors welcome! Check out our Contributors Guide for help getting started. Join us on Discord to meet other maintainers. We'll help you get your first contribution in no time! Directory Package Release Notes astro create-astro @astrojs/react @astrojs/preact @astrojs/solid-js @astrojs/svelte @astrojs/vue @astrojs/node @astrojs/vercel @astrojs/cloudflare @astrojs/partytown @astrojs/sitemap @astrojs/alpinejs @astrojs/mdx @astrojs/db @astrojs/rss @astrojs/netlify @astrojs/check @astrojs/language-server @astrojs/ts-plugin astro-vscode Several official projects are maintained outside of this repo: Project Repository @astrojs/compiler withastro/compiler Starlight withastro/starlight Links License (MIT) Code of Conduct Open Governance & Voting Project Funding Website Sponsors Astro is free, open source software made possible by these wonderful sponsors. \u2764\ufe0f Sponsor Astro! \u2764\ufe0f About The web framework for content-driven websites. \u2b50\ufe0f Star to support our work! astro.build Topics blog static-site-generator components node browser server universal static astro hybrid islands Resources Readme License View license Code of conduct Code of conduct Contributing Contributing Security policy Security policy Uh oh! There was an error while loading. Please reload this page . Activity Custom properties Stars 56.8k stars Watchers 201 watching Forks 3.1k forks Report repository Releases 2,738 @astrojs/node@9.5.3 Latest Feb 11, 2026 + 2,737 releases Sponsor this project Uh oh! There was an error while loading. Please reload this page . opencollective.com/ astrodotbuild thanks.dev/ u/gh/withastro Learn more about GitHub Sponsors Uh oh! There was an error while loading. Please reload this page . Contributors 1,029 Uh oh! There was an error while loading. Please reload this page . + 1,015 contributors Languages TypeScript 54.0% JavaScript 41.5% Astro 4.1% CSS 0.1% Vue 0.1% MDX 0.1% Other 0.1%",
+        "h1_list": [
+            "Search code, repositories, users, issues, pull requests...",
+            "Provide feedback",
+            "Saved searches",
+            "withastro/astro"
+        ],
+        "h2_list": [
+            "Navigation Menu",
+            "Use saved searches to filter your results more quickly",
+            "Folders and files",
+            "Latest commit",
+            "History",
+            "Repository files navigation",
+            "Install",
+            "Documentation",
+            "Support",
+            "Contributing",
+            "Directory",
+            "Links",
+            "Sponsors",
+            "About",
+            "Sponsor this project",
+            "Languages"
+        ],
+        "h3_list": [
+            "Uh oh!",
+            "License",
+            "Topics",
+            "Resources",
+            "License",
+            "Code of conduct",
+            "Contributing",
+            "Security policy",
+            "Uh oh!",
+            "Stars",
+            "Watchers",
+            "Forks",
+            "Uh oh!",
+            "Uh oh!",
+            "Uh oh!"
+        ]
+    }
+]

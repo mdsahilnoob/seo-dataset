@@ -1,0 +1,10 @@
+[
+    {
+        "clean_text": "Node.js \u2014 Run JavaScript Everywhere Skip to content Run JavaScript Everywhere Node.js\u00ae is a free, open-source, cross-platform JavaScript runtime environment\nthat lets developers create servers, web apps, command line tools and scripts. Get Node.js\u00ae Get Node.js\u00ae Get security support for EOL Node.js versions Node.js is proudly supported by the partners above and more . Create an HTTP Server Write Tests Read and Hash a File Streams Pipeline Work with Threads // server.mjs import { createServer } from ' node:http ' ; const server = createServer ( ( req , res ) => { res . writeHead ( 200 , { ' Content-Type ' : ' text/plain ' } ) ; res . end ( ' Hello World! \\n ' ) ; } ) ; // starts a simple http server locally on port 3000 server . listen ( 3000 , ' 127.0.0.1 ' , () => { console . log ( ' Listening on 127.0.0.1:3000 ' ) ; } ) ; // run with `node server.mjs` JavaScript Copy to clipboard Learn more what Node.js is able to offer with our Learning materials .",
+        "h1_list": [
+            "Run JavaScript Everywhere"
+        ],
+        "h2_list": [],
+        "h3_list": []
+    }
+]
