@@ -2,8 +2,10 @@ import os
 import json
 import re
 import html.parser
-import requests
-from urllib.parse import urlparse
+import time
+import random
+from playwright.sync_api import sync_playwright
+from playwright_stealth import Stealth
 
 # --- SEO Parser Logic ---
 class SEOParser(html.parser.HTMLParser):
@@ -25,31 +27,23 @@ class SEOParser(html.parser.HTMLParser):
     def handle_starttag(self, tag, attrs):
         self.depth += 1
         self.current_tag = tag
-        if tag == 'script' or tag == 'style':
+        if tag in ['script', 'style', 'header', 'aside', 'footer', 'nav']:
             self.in_script = True
-        elif tag == 'nav':
-            self.in_nav = True
-        elif tag == 'footer':
-            self.in_footer = True
         elif tag == 'main' or (tag == 'div' and any(attr[0] == 'role' and attr[1] == 'main' for attr in attrs)):
             self.in_main = True
             self.main_depth = self.depth
             self.main_found = True
 
     def handle_endtag(self, tag):
-        if tag == 'script' or tag == 'style':
+        if tag in ['script', 'style', 'header', 'aside', 'footer', 'nav']:
             self.in_script = False
-        elif tag == 'nav':
-            self.in_nav = False
-        elif tag == 'footer':
-            self.in_footer = False
         elif tag == 'main' or (self.in_main and self.depth == self.main_depth):
             self.in_main = False
         self.depth -= 1
         self.current_tag = ""
 
     def handle_data(self, data):
-        if self.in_script or self.in_nav or self.in_footer:
+        if self.in_script:
             return
         
         text = data.strip()
@@ -64,7 +58,6 @@ class SEOParser(html.parser.HTMLParser):
             self.h3_list.append(text)
         
         if self.in_main or not self.main_found:
-            # Simple space normalization
             self.clean_text_parts.append(text)
 
 def process_html(html_content):
@@ -78,7 +71,7 @@ def process_html(html_content):
         "h3_list": parser.h3_list
     }
 
-# --- Main Execution Logic ---
+# --- Browser Logic ---
 
 def get_next_index(data_dir):
     max_idx = 0
@@ -92,75 +85,74 @@ def get_next_index(data_dir):
     return max_idx + 1
 
 def main():
-    # Put your 10 links here
     urls = [
-        "https://en.wikipedia.org/wiki/JavaScript",
-        "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Language_overview",
-        "https://www.w3schools.com/js/",
-        "https://www.geeksforgeeks.org/javascript-introduction-to-javascript/",
-        "https://www.naukri.com/javascript-jobs",
-        "https://roadmap.sh/javascript",
-        "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-        "https://www.ambitionbox.com/profile/javascript-developer-salary",
-        "https://nodejs.org/",
-        "https://www.npmjs.com/"
+        "https://aws.amazon.com/what-is/saas/",
+        "https://en.wikipedia.org/wiki/Software_as_a_service",
+        "https://www.teamtweaks.com/blog/saas-companies-in-india/",
+        "https://www.naukri.com/saas-software-jobs",
+        "https://azure.microsoft.com/en-in/resources/cloud-computing-dictionary/what-is-saas",
+        "https://razorpay.com/blog/saas-india/",
+        "https://www.ambitionbox.com/profile/saas-developer-salary",
+        "https://saasboomi.org/india-saas-unicorn-tracker/",
+        "https://yourstory.com/saas-india",
+        "https://nasscom.in/knowledge-center/publications/india-saas-report-2026"
     ]
 
     source_dir = 'pagesource'
     data_dir = 'data.json'
 
-    for d in [source_dir, data_dir]:
-        if not os.path.exists(d):
-            os.makedirs(d)
+    if not os.path.exists(source_dir): os.makedirs(source_dir)
+    if not os.path.exists(data_dir): os.makedirs(data_dir)
 
     start_index = get_next_index(data_dir)
-    print(f"Starting numbering from: link{start_index:02d}")
-
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-    }
-
-    for i, url in enumerate(urls, start=start_index):
-        try:
-            print(f"Fetching: {url}...")
-            response = requests.get(url, headers=headers, timeout=15)
-            response.raise_for_status()
-            html_content = response.text
-
-            # Generate filename base (e.g., link21, link22...)
+    stealth_applier = Stealth()
+    
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True, args=["--disable-blink-features=AutomationControlled"])
+        
+        for i, url in enumerate(urls, start=start_index):
             file_base = f"link{i:02d}"
-            
-            # 1. Save raw source to /pagesource folder
-            source_path = os.path.join(source_dir, f"{file_base}.js")
-            with open(source_path, 'w', encoding='utf-8') as f:
-                f.write(html_content)
-            print(f"  Saved raw source to {source_path}")
+            try:
+                print(f"Fetching: {url}...")
+                context = browser.new_context(
+                    user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+                    viewport={'width': 1920, 'height': 1080}
+                )
+                page = context.new_page()
+                stealth_applier.apply_stealth_sync(page)
 
-            # 2. Process and convert to structured JSON
-            structured_data = process_html(html_content)
-            
-            # 3. Save to /data.json folder
-            json_path = os.path.join(data_dir, f"{file_base}.json")
-            with open(json_path, 'w', encoding='utf-8') as f:
-                json.dump([structured_data], f, indent=4)
-            print(f"  Saved processed data to {json_path}")
+                try:
+                    response = page.goto(url, wait_until="load", timeout=90000)
+                    if not response or response.status >= 400:
+                        status = response.status if response else "No Response"
+                        print(f"  [!] Received status {status}. skipping.")
+                        context.close()
+                        continue
 
-        except Exception as e:
-            print(f"  Error processing {url}: {e}")
+                    time.sleep(5)
+                    html_content = page.content()
+                    source_path = os.path.join(source_dir, f"{file_base}.js")
+                    with open(source_path, 'w', encoding='utf-8') as f:
+                        f.write(html_content)
+
+                    structured_data = process_html(html_content)
+                    json_path = os.path.join(data_dir, f"{file_base}.json")
+                    with open(json_path, 'w', encoding='utf-8') as f:
+                        json.dump([structured_data], f, indent=4)
+                    
+                    print(f"  Success: Saved processed data to {json_path}")
+                    if os.path.exists(source_path): os.remove(source_path)
+
+                except Exception as e:
+                    print(f"  Error processing {url}: {e}")
+                
+                context.close()
+                time.sleep(random.uniform(5, 10))
+
+            except Exception as e:
+                print(f"  Context error for {url}: {e}")
+
+        browser.close()
 
 if __name__ == "__main__":
     main()
-
-
-[
-  "https://en.wikipedia.org/wiki/JavaScript",
-  "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Language_overview",
-  "https://www.w3schools.com/js/",
-  "https://www.geeksforgeeks.org/javascript-introduction-to-javascript/",
-  "https://www.naukri.com/javascript-jobs",
-  "https://roadmap.sh/javascript",
-  "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  "https://www.ambitionbox.com/profile/javascript-developer-salary",
-  "https://nodejs.org/",
-  "https://www.npmjs.com/"
-]
